@@ -53,7 +53,7 @@ const Page: React.FC = () => {
             case 'Assignment':
                 return <Assignment />;
             case 'Document':
-                return <Document documents={[]} />;
+                return <Document/>;
             case 'Examination':
                 return <Examination />;
             case 'Attendance':
