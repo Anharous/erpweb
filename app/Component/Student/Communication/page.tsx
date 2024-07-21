@@ -1,6 +1,6 @@
 'use client'
 import { useState, ChangeEvent, FormEvent } from 'react';
-import './Communication.css';
+import './communication.css';
 
 const Communication = () => {
   const [smsNumber, setSmsNumber] = useState('');
