@@ -1,49 +1,79 @@
-'use client'
-import { useState, useEffect } from 'react';
-import  './attendances.css';
+// pages/attendance.tsx
+import React from 'react';
+import { NextPage } from 'next';
+// import { Pie } from 'react-chartjs-2';
+// import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js';
 
-interface AttendanceRecord {
-  date: string;
-  status: 'Present' | 'Absent';
+// Register ChartJS components
+// ChartJS.register(Title, Tooltip, Legend, ArcElement);
+
+interface AttendanceProps {
+  studentName: string;
+  totalWorkingDays: number;
+  daysAbsent: number;
 }
 
-const StudentAttendance = () => {
-  const [attendanceData, setAttendanceData] = useState<AttendanceRecord[]>([]);
+function Attendance({ studentName, totalWorkingDays, daysAbsent }: AttendanceProps) {
+  const daysPresent = totalWorkingDays - daysAbsent;
+  const attendancePercentage = ((daysPresent / totalWorkingDays) * 100).toFixed(2);
 
-  useEffect(() => {
-    // Replace with your data fetching logic
-    const fetchAttendanceData = async () => {
-      const response = await fetch('/api/attendance'); // Example API endpoint
-      const data = await response.json();
-      setAttendanceData(data);
-    };
-
-    fetchAttendanceData();
-  }, []);
+  const data = {
+    labels: ['Absent', 'Present'],
+    datasets: [
+      {
+        data: [daysAbsent, daysPresent],
+        backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(75, 192, 192, 0.2)'],
+        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(75, 192, 192, 1)'],
+        borderWidth: 1,
+      },
+    ],
+  };
 
   return (
-    <div className="container">
-      <h1>Attendance</h1>
-      <table className="table">
+    <div>
+      <h1>Attendance Report for {studentName}</h1>
+      <table>
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Status</th>
+            <th>Total Working Days</th>
+            <th>Days Absent</th>
+            <th>Attendance Percentage</th>
           </tr>
         </thead>
         <tbody>
-          {attendanceData.map((record, index) => (
-            <tr key={index}>
-              <td>{record.date}</td>
-              <td>{record.status}</td>
-            </tr>
-          ))}
+          <tr>
+            <td>{totalWorkingDays}</td>
+            <td>{daysAbsent}</td>
+            <td>{attendancePercentage}%</td>
+          </tr>
         </tbody>
       </table>
+      <div style={{ width: '50%', margin: '0 auto' }}>
+        {/* <Pie data={data} /> */}
+      </div>
+    </div>
+  );
+}
+
+const AttendancePage: NextPage = () => {
+  // Sample data; replace with actual data as needed
+  const studentData = {
+    studentName: 'Semarter 1',
+    totalWorkingDays: 90,
+    daysAbsent: 15,
+  };
+
+  return (
+    <div>
+      <Attendance
+        studentName={studentData.studentName}
+        totalWorkingDays={studentData.totalWorkingDays}
+        daysAbsent={studentData.daysAbsent}
+      />
     </div>
   );
 };
 
-export default StudentAttendance;
+export default AttendancePage;
 
     

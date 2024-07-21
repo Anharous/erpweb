@@ -52,7 +52,7 @@ const LoginPage: React.FC = () => {
     };
 
     return (
-        <div className="container">
+        <div className="faculty_container">
             <div className="loginpage">
                 <div className="loginleft">
                     <div className="login_logo">
