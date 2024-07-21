@@ -1,0 +1,41 @@
+.report_container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.report_container h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.report_container table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.report_container table,.report_container th,.report_container td {
+    border: 1px solid #ddd;
+}
+
+.report_container th,.report_container td {
+    padding: 12px;
+    text-align: left;
+}
+
+.report_container th {
+    background-color: #f2f2f2;
+}
+
+.report_container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.report_container button:hover {
+    background-color: #2e7acc;
+}

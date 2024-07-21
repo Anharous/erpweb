@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./examination.css"
 
 interface Exam {
   examNumber: string;
@@ -38,12 +39,13 @@ const FacultyExamTimetable: React.FC = () => {
 
   return (
     <div>
+      <div className='exam_container'>
       <h1>Faculty Exam Timetable Upload</h1>
       
-      <div>
+      <div  className="select">
         <label>Exam Name: </label>
         <select value={examName} onChange={(e) => setExamName(e.target.value)}>
-          <option value="">Select Exam</option>
+          <option value="SELECT">Select Exam</option>
           <option value="Internal 1">Internal 1</option>
           <option value="Internal 2">Internal 2</option>
           <option value="Semester">Semester</option>
@@ -61,15 +63,17 @@ const FacultyExamTimetable: React.FC = () => {
 
         <label>Department: </label>
         <input
+          id='department'
           type="text"
           value={department}
           onChange={(e) => setDepartment(e.target.value)}
         />
       </div>
+      </div>
 
       <h2>{examName} - {semester} - {department}</h2>
 
-      <table>
+      <table border={1} className='exam_table'>
         <thead>
           <tr>
             <th>Exam Number</th>

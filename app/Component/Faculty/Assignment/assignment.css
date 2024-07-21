@@ -1,13 +1,13 @@
-.examcontainer{
+.assignment_container{
      display: grid;
 }
 
-.examform{
+.assignment_form{
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  max-width: 381px;
-  width: 100%;
+      max-width: 518px;
+  width: 80%;
   margin: 0 auto;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -15,24 +15,33 @@
   margin-bottom: 30px;
 }
 
-.examform label{
+.assignment_form label{
     display: grid;
     grid-auto-flow: row;
 }
 
-.examform input{
-    height: 23px;
-    border-radius: 10px;
-    border: solid 1px;
+.assignment_form input{
+    height: 31px;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+
 }
 
-.examform button{
-    border: solid 1px;
+.assignment_form button{
+    border: solid 1px ;
     place-self: center;
     border-radius: 7px;
-    padding: 4px;
+    padding: 10px 19px;
+    background-color: #007bff;
+    color: white;
+    font-size: 17px;
 }
 
-.examcontainer h1{
+.assignment_form button:hover{
+     background-color: #3b7ec5;
+}
+
+
+.assignment_container h1{
    text-align: center;
 }

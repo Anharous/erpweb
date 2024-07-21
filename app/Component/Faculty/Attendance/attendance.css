@@ -1,0 +1,67 @@
+.atten_formcontainer{
+    margin: 107px 500px;
+    height: 525px;
+    padding: 37px;
+    width: 541px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.attendance_form{
+    display: grid;
+    grid-auto-flow: row;
+    gap: 21px;
+    padding: 0px 38px;
+}
+
+.attendance_container h2 {
+    margin-bottom: 37px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.atten_form-group label {
+    font-size: 23px;
+}
+
+.btn-primary {
+    padding: 12px 11px;
+    place-self: center;
+    background-color: #007bff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+        
+.attendance-table {
+    margin-top: 20px;
+}
+        
+.table th, .table td {
+    text-align: center;
+    height: 43px;
+}
+        
+        
+.form-control{
+    height: 40px;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+}
+        
+.atten_form-group{
+    display: grid;
+    grid-auto-flow: row;
+}
+       
+.attendance-table-mt-4{
+    align-self: center;
+    width: 100%;
+}
+
+table{
+    width: 100%;
+}
+

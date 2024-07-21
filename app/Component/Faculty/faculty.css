@@ -10,7 +10,16 @@
     grid-auto-flow: column;
     gap: 15px;
 }
-
+.logo_para{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 19px;
+}
+.logo_para p{
+    margin: 0px;
+}
 .logo img{
     width: 78px;
 }
@@ -38,8 +47,7 @@
     background-color: white;
     font-size: 17px;
     padding: 8px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 5px;
 }
 
 .profile{

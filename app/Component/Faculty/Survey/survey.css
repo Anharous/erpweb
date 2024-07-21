@@ -1,0 +1,55 @@
+.survey_container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.survey_container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 20px;
+    
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: -webkit-fill-available;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.survey_container button {
+    width: 27%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0px 37%;
+}
+
+.survey_container button:hover {
+    background-color: #0056b3;
+}

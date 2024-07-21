@@ -1,6 +1,8 @@
+import "./report.css"
+
 export default function page(){
     return(
-        <div className="container">
+        <div className="report_container">
         <h1>Attendance Report</h1>
         <table>
             <thead>

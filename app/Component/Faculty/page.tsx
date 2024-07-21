@@ -110,8 +110,10 @@ const Page: React.FC<PageProps> = ({ username }) => {
             <div className="header">
                 <div className="logo">
                     <img src="/peclogo.png" alt="PEC Logo" />
+                    <div className="logo_para">
                     <p>Panimalar</p>
                     <p>Engineering College</p>
+                    </div>
                 </div>
                 <div className="buttons">
                     <button className="btn" onClick={() => handleButtonClick('Academic')}>Academic</button>

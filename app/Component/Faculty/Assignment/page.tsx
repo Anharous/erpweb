@@ -46,9 +46,9 @@ const FacultyAssignmentPage: React.FC = () => {
   };
 
   return (
-    <div className='examcontainer'>
+    <div className='assignment_container'>
       
-      <form onSubmit={handleSubmit} className='examform'>
+      <form onSubmit={handleSubmit} className='assignment_form'>
       <h1>Upload Assignment Details</h1>
         <label>
           Assignment Number:
