@@ -98,11 +98,11 @@ const Page: React.FC = () => {
             department: 'Department of Computer Science and Business System',
             course: 'B.Tech Computer Science and Business System'
         },
-        '2022peccb118': {
+        '2022peccb117': {
             img:"/loginstudent.png",
             name: 'Gayathri S',
             admission: '12345678',
-            rollNo: '2022peccb118',
+            rollNo: '2022peccb117',
             class: "III 'A'",
             degree: 'Under Graduate',
             department: 'Department of Computer Science and Business System',
