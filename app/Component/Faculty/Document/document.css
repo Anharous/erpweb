@@ -1,18 +1,23 @@
-.container {
+.faculty-container {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 37px;
   background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
 }
 
-h1 {
+
+
+.document_container h1 {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-input[type="text"],
+.faculty-container input[type="text"],
 input[type="file"] {
   display: block;
   width: calc(100% - 22px);
@@ -22,7 +27,7 @@ input[type="file"] {
   border-radius: 4px;
 }
 
-button {
+.document_container button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
@@ -31,8 +36,17 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 170px;
+  justify-self: center;
 }
 
-button:hover {
+.document_container button:hover {
   background-color: #0056b3;
+}
+
+.document_container table{
+      width: 100%;
+}
+.document_table td{
+    text-align: center;
 }
