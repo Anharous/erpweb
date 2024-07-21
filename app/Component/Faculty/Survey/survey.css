@@ -41,13 +41,13 @@
 .survey_container button {
     width: 27%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #00afff;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    margin: 0px 18%;
+    margin: 0px 35%;
 }
 
 .survey_container button:hover {
