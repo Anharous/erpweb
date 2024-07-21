@@ -16,12 +16,14 @@
 .loginleft{
     padding: 35px;
     background-color: #00afff;
+    border-top-left-radius: 100px;
 
 }
 
 .loginright{
     padding: 51px 36px;
     border: solid 2px #00afff;
+    border-bottom-right-radius: 100px;
 }
 
 #user_id, #password{
