@@ -55,7 +55,7 @@ const LoginPage: React.FC = () => {
     };
 
     return (
-        <div className="container">
+        <div className="login_container">
             <div className="loginpage">
                 <div className="loginleft">
                     <div className="login_logo">

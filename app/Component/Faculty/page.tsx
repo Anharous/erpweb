@@ -14,12 +14,12 @@ import Survey from './Survey/page';
 
 interface Faculty {
     name: string;
-    admission: string;
+    // admission: string;
     rollNo: string;
-    class: string;
-    degree: string;
+    // class: string;
+    // degree: string;
     department: string;
-    course: string;
+    // course: string;
 }
 
 interface Faculties {
@@ -76,21 +76,21 @@ const Page: React.FC = () => {
     const faculties: Faculties = {
         'csbs101': {
             name: 'Faculty Member 1',
-            admission: '12345678',
-            rollNo: 'csbs101',
-            class: 'Class 1',
-            degree: 'Post Graduate',
+            // admission: '12345678',
+             rollNo: 'csbs101',
+            // class: 'Class 1',
+            // degree: 'Post Graduate',
             department: 'Department of Computer Science and Business System',
-            course: 'M.Tech Computer Science and Business System'
+            // course: 'M.Tech Computer Science and Business System'
         },
         'csbs102': {
             name: 'Faculty Member 2',
-            admission: '12345678',
+            // admission: '12345678',
             rollNo: 'csbs102',
-            class: 'Class 2',
-            degree: 'Post Graduate',
+            // class: 'Class 2',
+            // degree: 'Post Graduate',
             department: 'Department of Computer Science and Business System',
-            course: 'M.Tech Computer Science and Business System'
+            // course: 'M.Tech Computer Science and Business System'
         }
     };
 
@@ -134,14 +134,15 @@ const Page: React.FC = () => {
             {facultyData ? (
                 <div className={getFacultyClass(facultyData.rollNo)}>
                     <img src="" alt="" />
-                    <div>
+                    <div className="faculty_home">
+                        <p>Welsome!!</p>
                         <p>NAME: {facultyData.name}</p>
-                        <p>ADMISSION: {facultyData.admission}</p>
-                        <p>ROLLNO: {facultyData.rollNo}</p>
-                        <p>CLASS: {facultyData.class}</p>
-                        <p>DEGREE: {facultyData.degree}</p>
+                        {/* <p>ADMISSION: {facultyData.admission}</p> */}
+                        {/* <p>ROLLNO: {facultyData.rollNo}</p> */}
+                        {/* <p>CLASS: {facultyData.class}</p> */}
+                        {/* <p>DEGREE: {facultyData.degree}</p> */}
                         <p>DEPARTMENT: {facultyData.department}</p>
-                        <p>COURSE: {facultyData.course}</p>
+                        {/* <p>COURSE: {facultyData.course}</p> */}
                     </div>
                 </div>
             ) : (

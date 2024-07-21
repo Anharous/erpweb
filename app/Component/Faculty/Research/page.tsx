@@ -5,12 +5,12 @@ export default function page(){
         <div className="research_container">
         <h1>Research Module</h1>
 
-        <div className="section">
+        <div className="faculty_research_section">
             <h2 className="section-title">Research Activities and Details</h2>
             <p>Details about various research activities go here. This section can include information about ongoing projects, collaborations, and achievements.</p>
         </div>
 
-        <div className="section">
+        <div className="faculty_research_section">
             <h2 className="section-title">Faculty Analysis</h2>
             <div className="faculty-analysis">
                 <table>

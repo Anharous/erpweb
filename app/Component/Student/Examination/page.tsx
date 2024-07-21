@@ -17,10 +17,10 @@ const StudentExamModule: React.FC = () => {
     // Mock API call to fetch exams data from the backend
     const fetchExams = async () => {
       const data: Exam[] = [
-        { id: 1, examNumber: 'E101', subjectCode: 'MATH101', subjectName: 'Mathematics', examDate: '2024-08-01', examMode: 'AM' },
-        { id: 2, examNumber: 'E102', subjectCode: 'PHYS101', subjectName: 'Physics', examDate: '2024-08-03', examMode: 'PM' },
-        { id: 3, examNumber: 'E103', subjectCode: 'CHEM101', subjectName: 'Chemistry', examDate: '2024-08-05', examMode: 'AM' },
-        { id: 4, examNumber: 'E104', subjectCode: 'BIO101', subjectName: 'Biology', examDate: '2024-08-07', examMode: 'PM' },
+        { id: 1, examNumber: '1', subjectCode: '21CB1501', subjectName: 'Statistical computing with R', examDate: '2024-08-01', examMode: 'AM' },
+        { id: 2, examNumber: '2', subjectCode: '21CB1502', subjectName: 'Software Design with UML', examDate: '2024-08-03', examMode: 'PM' },
+        { id: 3, examNumber: '3', subjectCode: '21CB1503', subjectName: 'Fundamentals of Management', examDate: '2024-08-05', examMode: 'AM' },
+        { id: 4, examNumber: '4', subjectCode: '21MA1515', subjectName: 'Operations Research', examDate: '2024-08-07', examMode: 'PM' },
       ];
       setExams(data);
     };
