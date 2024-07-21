@@ -1,6 +1,6 @@
 
-import React from 'react';
-import './academic.css'
+        import React from 'react';
+import './acadamic.css'
 
 const AcademicDetails = () => {
   return (

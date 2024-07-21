@@ -176,7 +176,7 @@ const Page: React.FC = () => {
                     </div>
                 </div>
             ) : (
-                <p>No student data available.</p>
+                <p></p>
             )}
              <div className="line"></div>
             <div className="screen">

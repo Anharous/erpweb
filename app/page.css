@@ -1,5 +1,9 @@
 .login_header{
-  background-color:#00afff;
+  background-color: #00afff;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 12px;
 }
 
 .login_modules{
@@ -18,12 +22,11 @@
 }
 
 .module, .module_admin, .module_student{
-  border-radius: 157px;
-    width: 247px;
-    height: 247px;
+      border-radius: 157px;
+    width: 204px;
+    height: 210px;
     border: solid 2px black;
     text-align: center;
-    align-items: center;
   
 
 }
@@ -36,8 +39,8 @@
 }
 .login{
   border: solid 2px black;
-    width: 137px;
-    height: 118px;
+    width: 107px;
+    height: 82px;
         display: flex;
     align-items: center;
     justify-content: center;
@@ -46,11 +49,39 @@
 }
 
 .img{
-      width: 121px;
+         width: 104px;
     padding-top: 32px;
 }
 
 .module p, .module_admin p, .module_student p{
-        font-size: 29px;
+     font-size: 29px;
     margin-top: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.home_logo h2{
+
+      font-size: 43px;
+    margin: unset;
+}
+
+.home_logo p:nth-child(1){
+      font-size: 22px;
+    margin: unset;
+}
+
+.home_logo p:nth-child(2){
+      font-size: 18px;
+    margin: unset;
+}
+
+.home_logo p:nth-child(3){
+      font-size: 12px;
+    margin: unset;
+}
+
+.home_logo :nth-child(4){
+  font-size: 13px;
+    margin: unset;
 }

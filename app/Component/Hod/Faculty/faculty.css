@@ -1,0 +1,33 @@
+.faculty_hod_table{
+          width: 100%;
+          border-collapse: collapse;
+        }
+.faculty_hod_table th,.faculty_hod_table td {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+ .faculty_hod_table  th {
+          background-color: #f4f4f4;
+          text-align: left;
+        }
+ .faculty_hod_table tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+  .faculty_hod_table  tr:hover {
+          background-color: #ddd;
+        }
+
+.faculty_hod {
+      margin: 43px;
+}
+
+.navigate{
+  height: 40px;
+  pad: 5px 20px;
+  margin: 28px 10px;
+  color: white;
+  border: none;
+  background-color: #00afff;
+  border-radius:10px ;
+  font-size: 16px;
+}

@@ -135,7 +135,7 @@ const Page: React.FC = () => {
                 <div className={getFacultyClass(facultyData.rollNo)}>
                     <img src="" alt="" />
                     <div className="faculty_home">
-                        <p>Welsome!!</p>
+                        <p>Welcome!!</p>
                         <p>NAME: {facultyData.name}</p>
                         {/* <p>ADMISSION: {facultyData.admission}</p> */}
                         {/* <p>ROLLNO: {facultyData.rollNo}</p> */}
@@ -146,7 +146,7 @@ const Page: React.FC = () => {
                     </div>
                 </div>
             ) : (
-                <p>No faculty data available.</p>
+                <p></p>
             )}
             <div className="screen">
                 {renderComponent()}

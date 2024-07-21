@@ -6,8 +6,13 @@ export default function Home() {
   return (
     <div>
       <div className="login_header">
-        <div>
-        <img src="/peclogo.png" alt="" />
+        <img src="/peclogo.png" alt="logo" />
+        <div className="home_logo">
+        <h2>PANIMALAR</h2>
+        <p>ENGINEERING COLLEGE</p>
+        <p>An Autonomous institute</p>
+        <p>Affilated to Anna Univercity, chennai</p>
+        <p>(JAISAKTHI EDUCATIONAL TRUST)</p>
         </div>
       </div>
       <div className="login_modules">
