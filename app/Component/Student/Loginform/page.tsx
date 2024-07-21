@@ -12,7 +12,7 @@ const validCredentials: Credentials[] = [
     { username: '2022peccb101', password: 'Abinaya' },
     { username: '2022peccb105', password: 'Amirtha' },
     { username: '2022peccb114', password: 'Dhanaya' },
-    { username: '2022peccb118', password: 'Gayathri' },
+    { username: '2022peccb117', password: 'Gayathri' },
     { username: '2022peccb149', password: 'Logeshwary' },
 ];
 
