@@ -12,6 +12,7 @@ import Research from './Research/page'
 
 
 interface Student {
+    img: string;
     name: string;
     admission: string;
     rollNo: string;
@@ -68,6 +69,7 @@ const Page: React.FC = () => {
 
     const students: Students = {
         '2022peccb101': {
+            img:"/loginstudent.png",
             name: 'Abinaya K',
             admission: '12345678',
             rollNo: '2022peccb101',
@@ -77,6 +79,7 @@ const Page: React.FC = () => {
             course: 'B.Tech Computer Science and Business System'
         },
         '2022peccb105': {
+            img:"/loginstudent.png",
             name: 'AmirthaLakshmi',
             admission: '12345678',
             rollNo: '2022peccb105',
@@ -86,6 +89,7 @@ const Page: React.FC = () => {
             course: 'B.Tech Computer Science and Business System'
         },
         '2022peccb114': {
+            img:"/loginstudent.png",
             name: 'Dhanya Sri S',
             admission: '12345678',
             rollNo: '2022peccb114',
@@ -95,6 +99,7 @@ const Page: React.FC = () => {
             course: 'B.Tech Computer Science and Business System'
         },
         '2022peccb118': {
+            img:"/loginstudent.png",
             name: 'Gayathri S',
             admission: '12345678',
             rollNo: '2022peccb118',
@@ -104,6 +109,7 @@ const Page: React.FC = () => {
             course: 'B.Tech Computer Science and Business System'
         },
         '2022peccb149': {
+            img:"/loginstudent.png",
             name: 'Logeshwary',
             admission: '12345678',
             rollNo: '2022peccb149',
@@ -159,6 +165,7 @@ const Page: React.FC = () => {
                 <div className={getStudentClass(studentData.rollNo)}>
                     <img src="" alt="" />
                     <div className="studentdetails">
+                        <img className="student_img" src="/user.png" alt="studentlogo" />
                         <p>NAME: {studentData.name}</p>
                         <p>ADMISSION: {studentData.admission}</p>
                         <p>ROLLNO: {studentData.rollNo}</p>

@@ -1,0 +1,104 @@
+.communication_header {
+    background-color: #00afff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.navList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navList li {
+    display: inline;
+    margin: 0 1em;
+}
+
+.navList li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    padding: 2em 13em;
+}
+
+.section {
+    background-color: white;
+    margin-bottom: 2em;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 676px;
+    margin: 0px 25%;
+}
+
+.section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+}
+
+.communication_form form label {
+    display: block;
+    margin-top: 1em;
+}
+
+.communication_form form input,
+.communication_form form textarea,
+.communication_form form button {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.communication_formform button {
+    background-color: #00afff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.communication_form form button:hover {
+    background-color: #555;
+}
+
+.chatWindow {
+    border: 1px solid #ccc;
+    padding: 1em;
+    height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 1em;
+    background-color: #f9f9f9;
+}
+
+.notices {
+    margin-top: 1em;
+}
+
+.communication_form input{
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.communication_form{
+    display: grid;
+}
+
+#smsMessage{
+        height: 52px;
+    border-radius: 9px;
+}
+
+.communication_form button{
+    margin: 24px 284px;
+    width: 98px;
+    height: 33px;
+    background-color: #00afff;
+    border: none;
+    border-radius: 9px;
+    color: white;
+}

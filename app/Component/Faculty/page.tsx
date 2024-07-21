@@ -1,6 +1,7 @@
 'use client';
 import "./faculty.css"
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Academic from './Academic/page';
 import Attendance from './Attendance/page';
 import Assignment from './Assignment/page';
@@ -25,42 +26,19 @@ interface Faculties {
     [key: string]: Faculty; // Index signature to allow dynamic keys
 }
 
-interface PageProps {
-    username: string;
-}
-
-const Page: React.FC<PageProps> = ({ username }) => {
+const Page: React.FC = () => {
     const [selectedComponent, setSelectedComponent] = useState<string | null>(null);
-    const [facultyData, setFacultyData] = useState<Faculty | null>(null);
-
-    // Define the faculties object with a proper type
-    const faculties: Faculties = {
-        'csbs101': {
-            name: 'Faculty Member 1',
-            admission: '12345678',
-            rollNo: 'csbs101',
-            class: 'Class 1',
-            degree: 'Post Graduate',
-            department: 'Department of Computer Science and Business System',
-            course: 'M.Tech Computer Science and Business System'
-        },
-        'csbs102': {
-            name: 'Faculty Member 2',
-            admission: '12345678',
-            rollNo: 'csbs102',
-            class: 'Class 2',
-            degree: 'Post Graduate',
-            department: 'Department of Computer Science and Business System',
-            course: 'M.Tech Computer Science and Business System'
-        }
-    };
+    const [username, setUsername] = useState<string | null>(null);
+    const router = useRouter();
 
     useEffect(() => {
-        if (username) {
-            const data = faculties[username.toLowerCase()] || null;
-            setFacultyData(data);
+        const storedUsername = localStorage.getItem('username');
+        if (!storedUsername) {
+            router.push('/Loginform');
+        } else {
+            setUsername(storedUsername);
         }
-    }, [username]);
+    }, [router]);
 
     const handleButtonClick = (component: string) => {
         setSelectedComponent(component);
@@ -92,6 +70,32 @@ const Page: React.FC<PageProps> = ({ username }) => {
                 return null;
         }
     };
+
+
+    // Define the faculties object with a proper type
+    const faculties: Faculties = {
+        'csbs101': {
+            name: 'Faculty Member 1',
+            admission: '12345678',
+            rollNo: 'csbs101',
+            class: 'Class 1',
+            degree: 'Post Graduate',
+            department: 'Department of Computer Science and Business System',
+            course: 'M.Tech Computer Science and Business System'
+        },
+        'csbs102': {
+            name: 'Faculty Member 2',
+            admission: '12345678',
+            rollNo: 'csbs102',
+            class: 'Class 2',
+            degree: 'Post Graduate',
+            department: 'Department of Computer Science and Business System',
+            course: 'M.Tech Computer Science and Business System'
+        }
+    };
+
+
+    const facultyData = username ? faculties[username.toLowerCase()] : null;
 
     // Helper function to determine which class to show
     const getFacultyClass = (rollNo: string) => {

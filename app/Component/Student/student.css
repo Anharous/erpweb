@@ -38,8 +38,7 @@
     background-color: white;
     font-size: 17px;
     padding: 8px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 10px;
 }
 
 .profile{
@@ -55,7 +54,11 @@
     display: grid;
     justify-content: center;
     font-size: 18px;
-    padding: 0 35%;
+    margin: 0 35%;
+    padding: 10px 30px;
+    border-radius: 34px;
+    border: solid 1px #ccc;
+    
 }
 
 .studentdetails p{
@@ -65,4 +68,9 @@
     border: solid 1px #00afff;
     border-radius: 16px;
     margin: 14px 26px;
+}
+
+.student_img{
+        width: 173px;
+    padding: 18px 113px;
 }
