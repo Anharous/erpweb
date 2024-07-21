@@ -9,8 +9,8 @@ interface Credentials {
 }
 
 const validCredentials: Credentials[] = [
-    { username: 'csbs1', password: 'Rekha' },
-    { username: 'csbs2', password: 'geetha' },
+    { username: 'csbs101', password: 'csbs101' },
+    { username: 'csbs102', password: 'csbs102' },
 ];
 
 const LoginPage: React.FC = () => {
@@ -59,7 +59,7 @@ const LoginPage: React.FC = () => {
                         <img src="/peclogo.png" alt="logo" />
                         <h1>Panimalar Engineering College</h1>
                     </div>
-                    <h2>Welcome!</h2>
+                    <h2>Faculty Login</h2>
                     <p>Please log in to access your personalized dashboard.</p>
                 </div>
                 <div className="loginright">

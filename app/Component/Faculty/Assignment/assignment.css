@@ -1,0 +1,38 @@
+.examcontainer{
+     display: grid;
+}
+
+.examform{
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 381px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  margin-bottom: 30px;
+}
+
+.examform label{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.examform input{
+    height: 23px;
+    border-radius: 10px;
+    border: solid 1px;
+}
+
+.examform button{
+    border: solid 1px;
+    place-self: center;
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.examcontainer h1{
+   text-align: center;
+}

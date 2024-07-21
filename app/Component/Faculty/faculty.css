@@ -1,0 +1,68 @@
+.header{
+    background-color: #00afff;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.logo{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+.logo img{
+    width: 78px;
+}
+.logoname{
+    margin-top: 5%;
+}
+
+.logoname p{
+    font-size: 25px;
+    margin: 0px;
+    align-self: center;
+
+}
+
+.buttons{
+    display: grid;
+    grid-auto-flow: column;
+    padding: 27px;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.btn{
+        border: solid 1px;
+    background-color: white;
+    font-size: 17px;
+    padding: 8px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.profile{
+    border-radius: 50px;
+}
+
+.profile img{
+    width: 37px;
+    height: 34px;
+}
+
+.studentdetails{
+    display: grid;
+    justify-content: center;
+    font-size: 18px;
+    padding: 0 35%;
+}
+
+.studentdetails p{
+    margin: 6px 0px;
+}
+.line{
+    border: solid 1px #00afff;
+    border-radius: 16px;
+    margin: 14px 26px;
+}
