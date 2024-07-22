@@ -1,4 +1,5 @@
 // pages/attendance.tsx
+'use client'
 import React from 'react';
 import { NextPage } from 'next';
 // import { Pie } from 'react-chartjs-2';

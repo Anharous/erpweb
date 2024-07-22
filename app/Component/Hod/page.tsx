@@ -158,6 +158,7 @@ const Page: React.FC = () => {
                 </div>
             </div>
             <div className="hod_welcome">
+                <img src="/csbshod.png" alt="hod_img" className="hod_img"/>
                 <h1>Welcome!</h1>
                 <h2>Head Of The Department</h2>
             </div>

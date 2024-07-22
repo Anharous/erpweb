@@ -1,4 +1,5 @@
 // StudentDetails.tsx
+'use client'
 import React, { useState } from 'react';
 import './student.css'
 import Link from 'next/link';
