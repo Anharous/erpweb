@@ -31,6 +31,47 @@ const Page: React.FC = () => {
     const router = useRouter();
 
     useEffect(() => {
+        const buttonIds = [
+            'btonone',
+            'btontwo',
+            'btonthree',
+            'btonfour',
+            'btonfive',
+            'btonsix',
+            'btonseven',
+            'btoneight',
+            'btonnine',
+            'btonten'
+        ];
+
+        const scrollToFormPage = () => {
+            const formPage = document.getElementById('screen')?.offsetTop;
+            
+            if (formPage !== undefined) {
+                window.scrollTo({
+                    top: formPage,
+                    behavior: 'smooth'
+                });
+            }
+        };
+
+        const buttons = buttonIds.map(id => document.getElementById(id)).filter(button => button !== null);
+
+        buttons.forEach(button => {
+            button.addEventListener('click', scrollToFormPage);
+        });
+
+        // Clean up the event listeners when the component unmounts
+        return () => {
+            buttons.forEach(button => {
+                button.removeEventListener('click', scrollToFormPage);
+            });
+        };
+    }, []);
+
+    
+
+    useEffect(() => {
         const storedUsername = localStorage.getItem('username');
         if (!storedUsername) {
             router.push('/Component/Loginform');
@@ -149,18 +190,20 @@ const Page: React.FC = () => {
                     </div>
                 </div>
                 <div className="buttons">
-                    <button className="btn" onClick={() => handleButtonClick('Academic')}>Academic</button>
-                    <button className="btn" onClick={() => handleButtonClick('Faculty')}>Faculty</button>
-                    <button className="btn" onClick={() => handleButtonClick('Student')}>Student</button>
-                    <button className="btn" onClick={() => handleButtonClick('Survey')}>Survey</button>
-                    <button className="btn" onClick={() => handleButtonClick('Communication')}>Communication</button>
-                    <button className="btn" onClick={() => handleButtonClick('Research')}>Research</button>
+                    <button className="btn" id="btonone" onClick={() => handleButtonClick('Academic')}>Academic</button>
+                    <button className="btn" id="btontwo" onClick={() => handleButtonClick('Faculty')}>Faculty</button>
+                    <button className="btn" id="btonthree" onClick={() => handleButtonClick('Student')}>Student</button>
+                    <button className="btn" id="btonfour" onClick={() => handleButtonClick('Survey')}>Survey</button>
+                    <button className="btn" id="btonfive" onClick={() => handleButtonClick('Communication')}>Communication</button>
+                    <button className="btn" id="btonsix" onClick={() => handleButtonClick('Research')}>Research</button>
                 </div>
             </div>
             <div className="hod_welcome">
                 <img src="/csbshod.png" alt="hod_img" className="hod_img"/>
                 <h1>Welcome!</h1>
+                <h1>Dr. D.Anuradha M.E., PGDBA(Finance), Ph.D.</h1>
                 <h2>Head Of The Department</h2>
+                <h2>Computer Science And Business Systems</h2>
             </div>
             {/* {studentData ? (
                 <div className={getStudentClass(studentData.rollNo)}>
@@ -180,7 +223,7 @@ const Page: React.FC = () => {
                 <p>No student data available.</p>
             )} */}
              <div className="line"></div>
-            <div className="screen">
+            <div className="screen" id="screen">
                 {renderComponent()}
             </div>
         </div>
