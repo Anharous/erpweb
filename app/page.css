@@ -64,24 +64,25 @@
 
       font-size: 43px;
     margin: unset;
+    text-align: center;
 }
 
-.home_logo p:nth-child(1){
+.home_logo p:nth-child(2){
       font-size: 22px;
     margin: unset;
 }
 
-.home_logo p:nth-child(2){
+.home_logo p:nth-child(3){
       font-size: 18px;
     margin: unset;
 }
 
-.home_logo p:nth-child(3){
+.home_logo p:nth-child(4){
       font-size: 12px;
     margin: unset;
 }
 
-.home_logo :nth-child(4){
+.home_logo :nth-child(5){
   font-size: 13px;
     margin: unset;
 }

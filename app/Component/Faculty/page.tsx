@@ -32,9 +32,48 @@ const Page: React.FC = () => {
     const router = useRouter();
 
     useEffect(() => {
+        const buttonIds = [
+            'btnone',
+            'btntwo',
+            'btnthree',
+            'btnfour',
+            'btnfive',
+            'btnsix',
+            'btnseven',
+            'btneight',
+            'btnnine',
+            'btnten'
+        ];
+
+        const scrollToFormPage = () => {
+            const formPage = document.getElementById('screenn')?.offsetTop;
+            
+            if (formPage !== undefined) {
+                window.scrollTo({
+                    top: formPage,
+                    behavior: 'smooth'
+                });
+            }
+        };
+
+        const buttons = buttonIds.map(id => document.getElementById(id)).filter(button => button !== null);
+
+        buttons.forEach(button => {
+            button.addEventListener('click', scrollToFormPage);
+        });
+
+        // Clean up the event listeners when the component unmounts
+        return () => {
+            buttons.forEach(button => {
+                button.removeEventListener('click', scrollToFormPage);
+            });
+        };
+    }, []);
+
+    useEffect(() => {
         const storedUsername = localStorage.getItem('username');
         if (!storedUsername) {
-            router.push('/Loginform');
+            router.push('/Faculty/Loginform');
         } else {
             setUsername(storedUsername);
         }
@@ -115,20 +154,20 @@ const Page: React.FC = () => {
                 <div className="logo">
                     <img src="/peclogo.png" alt="PEC Logo" />
                     <div className="logo_para">
-                    <p>Panimalar</p>
-                    <p>Engineering College</p>
+                    <p>PANIMALAR</p>
+                    <p>ENGINEERING COLLEGE</p>
                     </div>
                 </div>
                 <div className="buttons">
-                    <button className="btn" onClick={() => handleButtonClick('Academic')}>Academic</button>
-                    <button className="btn" onClick={() => handleButtonClick('Attendance')}>Attendance</button>
-                    <button className="btn" onClick={() => handleButtonClick('Assignment')}>Assignment</button>
-                    <button className="btn" onClick={() => handleButtonClick('Documents')}>Documents</button>
-                    <button className="btn" onClick={() => handleButtonClick('Examination')}>Examination</button>
-                    <button className="btn" onClick={() => handleButtonClick('Communication')}>Communication</button>
-                    <button className="btn" onClick={() => handleButtonClick('Report')}>Report</button>
-                    <button className="btn" onClick={() => handleButtonClick('Research')}>Research</button>
-                    <button className="btn" onClick={() => handleButtonClick('Survey')}>Survey</button>
+                    <button className="btn" id="btnone" onClick={() => handleButtonClick('Academic')}>Academic</button>
+                    <button className="btn" id="btntwo" onClick={() => handleButtonClick('Attendance')}>Attendance</button>
+                    <button className="btn" id="btnthree" onClick={() => handleButtonClick('Assignment')}>Assignment</button>
+                    <button className="btn" id="btnfour" onClick={() => handleButtonClick('Documents')}>Documents</button>
+                    <button className="btn" id="btnfive" onClick={() => handleButtonClick('Examination')}>Examination</button>
+                    <button className="btn" id="btnsix" onClick={() => handleButtonClick('Communication')}>Communication</button>
+                    <button className="btn" id="seven" onClick={() => handleButtonClick('Report')}>Report</button>
+                    <button className="btn" id="eight" onClick={() => handleButtonClick('Research')}>Research</button>
+                    <button className="btn" id="nine" onClick={() => handleButtonClick('Survey')}>Survey</button>
                 </div>
             </div>
             {facultyData ? (
@@ -148,7 +187,7 @@ const Page: React.FC = () => {
             ) : (
                 <p></p>
             )}
-            <div className="screen">
+            <div className="screen" id="screenn">
                 {renderComponent()}
             </div>
         </div>

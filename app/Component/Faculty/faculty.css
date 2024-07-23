@@ -17,6 +17,9 @@
     font-weight: bold;
     font-size: 19px;
 }
+.logo_para :nth-child(1){
+    font-size: 29px;
+}
 .logo_para p{
     margin: 0px;
 }

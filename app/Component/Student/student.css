@@ -22,9 +22,12 @@
     font-size: 25px;
     margin: 0px;
     align-self: center;
+    font-weight: bold;
 
 }
-
+.logoname P:nth-child(1){
+    font-size: 33px;
+}
 .buttons{
     display: grid;
     grid-auto-flow: column;
