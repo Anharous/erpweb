@@ -1,0 +1,76 @@
+.examModule {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buttonContainer button {
+  background-color: #00afff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.buttonContainer button:hover {
+  background-color: #00afff;
+}
+
+.buttonContainer button.active {
+  background-color: #00afff;
+}
+
+.examTable, .resultTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.examTable th, .resultTable th, .examTable td, .resultTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.examTable th, .resultTable th {
+  background-color: #00afff;
+  color: white;
+}
+
+.examTable tr:nth-child(even), .resultTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.examTable tr:hover, .resultTable tr:hover {
+  background-color: #ddd;
+}
+
+.cgpaContainer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #555;
+  margin-top: 30px;
+}

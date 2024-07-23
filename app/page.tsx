@@ -21,15 +21,18 @@ export default function Home() {
           <img className="img" src="/loginstudent.png" alt="student" />
           <p>Student</p></Link>
         </div>
+        <div className="empty"></div>
         <div className="pair_module">
           <div className="module">
           <Link href='/Component/Hod/Loginform'>
             <img className="img" src="/loginhod.png" alt="hod" />
             <p>HOD</p></Link>
           </div>
+          <div className="emptytwo"></div>
           <div className="login">
             <p>LogIn</p>
           </div>
+          <div className="emptythree"></div>
           <div className="module">
           <Link href='/Component/Faculty/Loginform'>
             <img className="img" src="/loginfaculty.png" alt="faculty" />
